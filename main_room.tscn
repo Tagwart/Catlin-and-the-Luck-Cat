@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl2bp524kfk46"]
+
+[ext_resource type="Texture2D" uid="uid://kegq2qdcsc13" path="res://Backgrounds/Grassy Background 2.png" id="1_f74uc"]
+[ext_resource type="PackedScene" uid="uid://5epfns24gp7m" path="res://Characters/Catlin/catlin.tscn" id="2_3k2er"]
+[ext_resource type="PackedScene" uid="uid://dxa563dstk7gq" path="res://Characters/Boulder/boulder.tscn" id="4_auvil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0dca"]
+size = Vector2(325, 91)
+
+[node name="MainRoom" type="Node2D"]
+
+[node name="GrassyBackground2" type="Sprite2D" parent="."]
+position = Vector2(512, 296)
+texture = ExtResource("1_f74uc")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassyBackground2"]
+position = Vector2(-284, -106)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassyBackground2/StaticBody2D"]
+position = Vector2(-9.5, -10.5)
+shape = SubResource("RectangleShape2D_h0dca")
+metadata/_edit_lock_ = true
+
+[node name="YSort" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Catlin" parent="YSort" instance=ExtResource("2_3k2er")]
+position = Vector2(242, 369)
+
+[node name="Boulder" parent="YSort" instance=ExtResource("4_auvil")]
+position = Vector2(468, 386)

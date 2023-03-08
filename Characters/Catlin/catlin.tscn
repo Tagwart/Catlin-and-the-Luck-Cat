@@ -1,0 +1,287 @@
+[gd_scene load_steps=24 format=3 uid="uid://5epfns24gp7m"]
+
+[ext_resource type="Script" path="res://Characters/Catlin/catlin.gd" id="1_2codg"]
+[ext_resource type="Texture2D" uid="uid://df6mm3ppgw34y" path="res://Characters/Catlin/Catlin_v0.png" id="2_7k4ec"]
+[ext_resource type="Script" path="res://Characters/Catlin/SpellAreaShape.gd" id="3_86tqo"]
+[ext_resource type="Script" path="res://Characters/Catlin/CatlinAnimationTree.gd" id="3_yn7sy"]
+[ext_resource type="Texture2D" uid="uid://dxq5xrw7sii60" path="res://Characters/Catlin/spell.png" id="4_lwj8w"]
+[ext_resource type="Script" path="res://Characters/Catlin/SpellSprite.gd" id="5_b2wrb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wtfxv"]
+height = 62.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7eb6b"]
+radius = 64.0703
+
+[sub_resource type="Animation" id="Animation_mbvnv"]
+resource_name = "IdleNorth"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpellArea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpellArea/SpellSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_ih7cx"]
+resource_name = "IdleSouth"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpellArea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpellArea/SpellSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dg2j7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpellArea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpellArea/SpellAreaShape:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpellArea/SpellSprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpellArea/SpellSprite:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bncdt"]
+resource_name = "IdleWest"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpellArea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpellArea/SpellSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_v6n11"]
+resource_name = "IdleEast"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpellArea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpellArea/SpellSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_fgxln"]
+resource_name = "CastSpell"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpellArea/SpellAreaShape:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpellArea/SpellSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k34ja"]
+_data = {
+"CastSpell": SubResource("Animation_fgxln"),
+"IdleEast": SubResource("Animation_v6n11"),
+"IdleNorth": SubResource("Animation_mbvnv"),
+"IdleSouth": SubResource("Animation_ih7cx"),
+"IdleWest": SubResource("Animation_bncdt"),
+"RESET": SubResource("Animation_dg2j7")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6oypc"]
+animation = &"IdleWest"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rdi3e"]
+animation = &"IdleSouth"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qj3cd"]
+animation = &"IdleEast"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x6ye2"]
+animation = &"IdleNorth"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_kbiec"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_6oypc")
+blend_point_0/pos = Vector2(-0.9, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_rdi3e")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_qj3cd")
+blend_point_2/pos = Vector2(0.9, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_x6ye2")
+blend_point_3/pos = Vector2(0, -0.9)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jnh67"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8q5jd"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_kbiec")
+states/Idle/position = Vector2(377, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_jnh67")]
+graph_offset = Vector2(-51, -1)
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_7nulx"]
+
+[node name="Catlin" type="CharacterBody2D"]
+script = ExtResource("1_2codg")
+
+[node name="CatlinShape" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_wtfxv")
+
+[node name="CatlinSprite" type="Sprite2D" parent="."]
+position = Vector2(4, -62)
+texture = ExtResource("2_7k4ec")
+
+[node name="SpellArea" type="Area2D" parent="."]
+position = Vector2(0, -8)
+
+[node name="SpellAreaShape" type="CollisionShape2D" parent="SpellArea"]
+position = Vector2(0, 72)
+rotation = -1.5708
+shape = SubResource("CircleShape2D_7eb6b")
+debug_color = Color(0.937255, 0.207843, 0.356863, 0.419608)
+script = ExtResource("3_86tqo")
+
+[node name="SpellSprite" type="Sprite2D" parent="SpellArea"]
+position = Vector2(0, 70)
+texture = ExtResource("4_lwj8w")
+script = ExtResource("5_b2wrb")
+
+[node name="CatlinAnimations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k34ja")
+}
+
+[node name="CatlinAnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_8q5jd")
+anim_player = NodePath("../CatlinAnimations")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_7nulx")
+parameters/Idle/blend_position = Vector2(0, 0.446541)
+script = ExtResource("3_yn7sy")
